@@ -33,12 +33,15 @@ Sarabun-Light.ttf */
 @tailwind components;
 @tailwind utilities;
 
-/* Global Defaults */
 body {
   font-family: "Open Sans", "Sarabun", sans-serif;
 }
 
-/* Open Sans Font Faces  */
+footer {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
@@ -112,7 +115,6 @@ body {
   font-style: italic;
 }
 
-/* Sarabun Font Faces    */
 @font-face {
   font-family: "Sarabun";
   src: url("/fonts/Sarabun-Thin.ttf") format("truetype");
@@ -208,4 +210,226 @@ body {
   src: url("/fonts/Sarabun-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
+}
+
+.sticky-menu .navbar-logo {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sticky-menu #navbarToggler span {
+  background-color: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sticky-menu #navbarToggler span {
+    background-color: #ffffff;
+  }
+}
+
+.sticky-menu #navbarCollapse li > a {
+  color: #1a1a1a;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.sticky-menu #navbarCollapse li > a:hover {
+  color: #0d6efd;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sticky-menu #navbarCollapse li > a {
+    color: #ffffff;
+  }
+}
+
+#navbarCollapse li .ud-menu-scroll.active {
+  opacity: 0.7;
+}
+
+.sticky-menu #navbarCollapse li .ud-menu-scroll.active {
+  color: #0d6efd;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sticky-menu #navbarCollapse li .ud-menu-scroll.active {
+    color: #ffffff;
+  }
+}
+
+.sticky-menu .loginBtn {
+  color: #1a1a1a;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.sticky-menu .loginBtn:hover {
+  color: #0d6efd;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sticky-menu .loginBtn {
+    color: #ffffff;
+  }
+}
+
+.sticky-menu .signUpBtn {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sticky-menu .signUpBtn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.navbarTogglerActive > span:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.navbarTogglerActive > span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarTogglerActive > span:nth-child(3) {
+  top: -8px;
+  transform: rotate(135deg);
+}
+
+.blog-details,
+.blog-details p {
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-details,
+  .blog-details p {
+    color: #a0a0a0;
+  }
+}
+
+.blog-details p {
+  margin-bottom: 2rem;
+}
+
+.blog-details strong {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-details strong {
+    color: #ffffff;
+  }
+}
+
+.blog-details ul {
+  margin-bottom: 2rem;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.blog-details ul > li + li {
+  margin-top: 0.75rem;
+}
+
+.blog-details ol {
+  margin-bottom: 2rem;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+.blog-details ol > li + li {
+  margin-top: 0.75rem;
+}
+
+.blog-details h1 {
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-details h1 {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 640px) {
+  .blog-details h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-details h1 {
+    font-size: 40px;
+    line-height: 1.28;
+  }
+}
+
+.blog-details h2 {
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-details h2 {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 640px) {
+  .blog-details h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-details h2 {
+    font-size: 35px;
+    line-height: 1.28;
+  }
+}
+
+.blog-details h3 {
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-details h3 {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 640px) {
+  .blog-details h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.ud-header {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: "100%";
+  margin-right: "auto";
+  margin-left: "auto";
+  justify-content: center;
 }

@@ -1,24 +1,27 @@
 import "./globals.css";
-import { headers } from "next/headers";
 import { ReactNode } from "react";
-
-export const metadata = {
-  title: "TSAD Official Website",
-  description: "Thai Society for Affective Disorders (since February, 2011)",
-};
+import { headers } from "next/headers";
+import ClientLayout from "@/components/Common/ClientLayout";
 
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const headersList = await headers();
-  const nonce = headersList.get("x-nonce") || "";
+  const headersList = headers();
+  const nonce = (await headersList).get("x-nonce") || "";
 
   return (
     <html lang="en">
-      <head></head>
-      <body>{children}</body>
+      <head>
+        {/* Optional: Example inline script with nonce */}
+        <script
+          nonce={nonce}
+        />
+      </head>
+      <body>
+        <ClientLayout nonce={nonce}>{children}</ClientLayout>
+      </body>
     </html>
   );
 }

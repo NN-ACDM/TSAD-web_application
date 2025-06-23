@@ -37,11 +37,6 @@ body {
   font-family: "Open Sans", "Sarabun", sans-serif;
 }
 
-footer {
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
 @font-face {
   font-family: "Open Sans";
   src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
@@ -421,8 +416,6 @@ footer {
 }
 
 .ud-header {
-  padding-left: 12rem;
-  padding-right: 12rem;
   display: flex;
   justify-content: center;
 }

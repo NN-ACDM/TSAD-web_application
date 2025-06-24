@@ -10,11 +10,10 @@ export default async function RootLayout({
 }) {
   const headersList = headers();
   const nonce = (await headersList).get("x-nonce") || "";
-
+  const theme = (await headersList).get("cookie")?.includes("theme=dark") ? "dark " : "";
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <head>
-        {/* Optional: Example inline script with nonce */}
         <script
           nonce={nonce}
         />

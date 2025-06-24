@@ -4,16 +4,16 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer
-      className="flex flex-col items-center wow fadeInUp relative z-10 pt-20 lg:pt-[100px] px-4"
+      className="flex flex-col items-center wow fadeInUp relative z-10 pt-16 lg:pt-[100px] px-6"
       data-wow-delay=".15s"
     >
       <div className="container">
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-between">
           <div className="px-4">
             <div className="mb-10">
               <h4 className="mb-4 text-lg font-semibold">Our Partners</h4>
               <ul>
-                <li className="relative overflow-hidden mb-3">
+                <li className="relative overflow-hidden mb-3 border-1 rounded-lg">
                   <Image
                     src="/images/partners/Chulalongkorn-University-logo.jpg"
                     alt="logo"
@@ -23,7 +23,7 @@ const Footer = () => {
                     priority
                   />
                 </li>
-                <li className="relative overflow-hidden mb-3">
+                <li className="relative overflow-hidden mb-3 border-1 rounded-lg">
                   <Image
                     src="/images/partners/ICO-logo.png"
                     alt="logo"
@@ -70,7 +70,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                  className="px-3 text-gray-7"
                 >
                   <svg
                     width="22"
@@ -86,7 +86,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                  className="px-3 text-gray-7"
                 >
                   <svg
                     width="22"
@@ -102,7 +102,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                  className="px-3 text-gray-7"
                 >
                   <svg
                     width="22"

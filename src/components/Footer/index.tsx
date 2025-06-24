@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer
-      className="flex flex-col items-center wow fadeInUp relative z-10 pt-16 lg:pt-[100px] px-6"
+      className="flex flex-col items-center wow fadeInUp relative z-10 pt-6 px-6 border-t border-[#8890A4] border-opacity-40"
       data-wow-delay=".15s"
     >
       <div className="container">
@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 w-full">
               <p className="mb-8 max-w-[360px] text-base text-gray-7">
-                We create digital experiences for brands and companies by using
+                We create excellent experiences and feeling for each other by using
                 technology.
               </p>
               <div className="-mx-3 flex items-center">

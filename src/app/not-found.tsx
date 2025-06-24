@@ -1,3 +1,4 @@
+import NotFound from "@/components/NotFound";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 const ErrorPage = () => {
   return (
     <>
+      <NotFound />
     </>
   );
 };

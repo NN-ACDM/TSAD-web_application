@@ -1,19 +1,16 @@
-
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Pricing from "@/components/Pricing";
+import Announcement from "@/components/Announcement";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Pricing Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is pricing page description",
+  title: "Announcement | TSAD Official Website",
 };
 
 const PricingPage = () => {
   return (
     <>
       <Breadcrumb pageName="Pricing Page" />
-      <Pricing />
+      <Announcement />
       {/* <Faq /> */}
     </>
   );

@@ -6,9 +6,10 @@ import { usePathname } from "next/navigation";
 import { Key, useEffect, useState } from "react";
 
 import { signOut, useSession } from "next-auth/react";
-import NavBarToggler from "../Common/NavBarToggler";
+import ThemeToggler from "./ThemeSwitcher";
 import TSADLogoVector from "@/vectors/TSADLogoVector";
-import menuData from "./menuData";
+import menuData from "../navigationBar/menuData";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -60,7 +61,7 @@ const Header = () => {
             <li key={index} className="content-center p-1 md:p-2 lg:p-4">
               <Link
                 scroll={false}
-                href={menuItem.path}
+                href={menuItem.path ?? "#"}
                 className={`${sticky ? "group-hover:text-primary" : ""} ${
                   pathUrl === menuItem?.path && sticky && "!text-primary"
                 }`}
@@ -71,6 +72,7 @@ const Header = () => {
           ))}
         </ul>
       </div>
+      <LanguageSwitcher />
       <div className="flex justify-between">
         <div className="block content-center content-center p-1 md:p-2 lg:p-4">
           Login

@@ -5,7 +5,7 @@ import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/navigation_bar";
+import Header from "@/components/NavBar";
 import PreLoader from "@/components/Common/PreLoader";
 import ScrollToTop from "@/components/ScrollToTop";
 

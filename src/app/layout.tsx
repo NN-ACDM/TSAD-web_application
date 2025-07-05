@@ -1,7 +1,7 @@
 import "./globals.css";
 import { ReactNode } from "react";
 import { headers } from "next/headers";
-import ClientLayout from "@/components/Common/ClientLayout";
+import ClientLayout from "@/app/ClientLayout";
 
 export default async function RootLayout({
   children,
@@ -10,13 +10,12 @@ export default async function RootLayout({
 }) {
   const headersList = headers();
   const nonce = (await headersList).get("x-nonce") || "";
-  const theme = (await headersList).get("cookie")?.includes("theme=dark") ? "dark " : "";
+  const language = (await headersList).get("cookie")?.includes("language=th")? "th": "en";
+
   return (
-    <html lang="en" className={theme}>
+    <html lang={language}>
       <head>
-        <script
-          nonce={nonce}
-        />
+        <script nonce={nonce} />
       </head>
       <body>
         <ClientLayout nonce={nonce}>{children}</ClientLayout>

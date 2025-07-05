@@ -6,11 +6,7 @@ export const metadata: Metadata = {
 };
 
 const ErrorPage = () => {
-  return (
-    <>
-      <NotFound />
-    </>
-  );
+  return <NotFound />;
 };
 
 export default ErrorPage;

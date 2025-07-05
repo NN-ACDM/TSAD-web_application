@@ -5,7 +5,7 @@ import { SessionProvider } from "next-auth/react";
 import { ThemeProvider } from "next-themes";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Header from "@/components/navigation_bar";
 import PreLoader from "@/components/Common/PreLoader";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -33,16 +33,10 @@ export default function ClientLayout({
             enableSystem={false}
             defaultTheme="light"
           >
-            <Header />
+            <Header/>
             {children}
             <Footer />
             <ScrollToTop />
-            <script
-              nonce={nonce}
-              dangerouslySetInnerHTML={{
-                __html: `console.log('Nonce on client')`,
-              }}
-            />
           </ThemeProvider>
         </SessionProvider>
       )}
